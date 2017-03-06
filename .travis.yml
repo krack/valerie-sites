@@ -22,18 +22,18 @@ script:
 - npm run build
 - cd ..
 after_success:
-- ./rancher-compose -p festyrepasduloup-dev -e dev.env rm -f
-- ./rancher-compose -p lesloupsgourmands-dev -e dev.env rm -f
+- ./rancher-compose -p festyrepasduloup-dev -e festyrepasduloup/dev.env rm -f
+- ./rancher-compose -p lesloupsgourmands-dev -e lesloupsgourmands/dev.env rm -f
 - docker build -t krack/festyrepasduloup:test .
 - docker build -t krack/lesloupsgourmands:test .
 - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
 - docker push krack/festyrepasduloup:test
 - docker push krack/lesloupsgourmands:test
-- ./rancher-compose -p festyrepasduloup-dev -f festyrepasduloup/docker-compose.yml -r festyrepasduloup/rancher-compose.yml -e dev.env up -d
-- ./rancher-compose -p lesloupsgourmands-dev -f lesloupsgourmands/docker-compose.yml -r lesloupsgourmands/rancher-compose.yml -e dev.env up -d
+- ./rancher-compose -p festyrepasduloup-dev -f festyrepasduloup/docker-compose.yml -r festyrepasduloup/rancher-compose.yml -e festyrepasduloup/dev.env up -d
+- ./rancher-compose -p lesloupsgourmands-dev -f lesloupsgourmands/docker-compose.yml -r lesloupsgourmands/rancher-compose.yml -e lesloupsgourmands/dev.env up -d
 before_deploy:
-- ./rancher-compose -p festyrepasduloup-prod -e prod.env rm -f
-- ./rancher-compose -p lesloupsgourmands-prod -e prod.env rm -f
+- ./rancher-compose -p festyrepasduloup-prod -e festyrepasduloup/prod.env rm -f
+- ./rancher-compose -p lesloupsgourmands-prod -e lesloupsgourmands/prod.env rm -f
 - cd festyrepasduloup/dist && zip -ro ../../festyrepasduloup.zip * && cd ../..
 - cd lesloupsgourmands/dist && zip -ro ../../lesloupsgourmands.zip * && cd ../..
 - docker tag krack/festyrepasduloup:test krack/festyrepasduloup:${TRAVIS_TAG}
@@ -44,8 +44,8 @@ before_deploy:
 - docker push krack/festyrepasduloup:${TRAVIS_TAG}
 - docker push krack/lesloupsgourmands:${TRAVIS_TAG}
 - docker push krack/yoga-site:latest
-- ./rancher-compose -p festyrepasduloup-prod -f festyrepasduloup/docker-compose.yml -r festyrepasduloup/rancher-compose.yml -e prod.env up -d
-- ./rancher-compose -p lesloupsgourmands-prod -f lesloupsgourmands/docker-compose.yml -r lesloupsgourmands/rancher-compose.yml -e prod.env up -d
+- ./rancher-compose -p festyrepasduloup-prod -f festyrepasduloup/docker-compose.yml -r festyrepasduloup/rancher-compose.yml -e festyrepasduloup/prod.env up -d
+- ./rancher-compose -p lesloupsgourmands-prod -f lesloupsgourmands/docker-compose.yml -r lesloupsgourmands/rancher-compose.yml -e lesloupsgourmands/prod.env up -d
 deploy:
   provider: releases
   api_key:
