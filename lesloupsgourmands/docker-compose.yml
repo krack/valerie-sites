@@ -7,7 +7,7 @@ services:
     labels:
       proxy_url: ${EXPOSE_URL}
   web:
-    image: krack/aps-shared-web:${TAG}
+    image: krack/lesloupsgourmands:${TAG}
     restart: always
     labels:
       io.rancher.container.pull_image: always

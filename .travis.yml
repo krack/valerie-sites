@@ -24,8 +24,8 @@ script:
 after_success:
 - ./rancher-compose -p festyrepasduloup-dev -f festyrepasduloup/docker-compose.yml -r festyrepasduloup/rancher-compose.yml -e festyrepasduloup/dev.env rm -f
 - ./rancher-compose -p lesloupsgourmands-dev -f lesloupsgourmands/docker-compose.yml -r lesloupsgourmands/rancher-compose.yml -e lesloupsgourmands/dev.env rm -f
-- docker build -t krack/festyrepasduloup:test .
-- docker build -t krack/lesloupsgourmands:test .
+- docker build -t krack/festyrepasduloup:test festyrepasduloup/.
+- docker build -t krack/lesloupsgourmands:test lesloupsgourmands/.
 - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
 - docker push krack/festyrepasduloup:test
 - docker push krack/lesloupsgourmands:test
