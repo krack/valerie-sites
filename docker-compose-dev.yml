@@ -1,0 +1,20 @@
+version: '2'
+services:
+  web-festy:
+    image: node:alpine
+    ports:
+    - 4200:4200
+    restart: never
+    working_dir: /usr/src/app
+    volumes:
+    - "./festyrepasduloup/:/usr/src/app"
+    command: sh -c 'npm install; npm start'
+  web-gourmand:
+    image: node:alpine
+    ports:
+    - 4201:4200
+    restart: never
+    working_dir: /usr/src/app
+    volumes:
+    - "./lesloupsgourmands/:/usr/src/app"
+    command: sh -c 'npm install; npm start'

@@ -1,0 +1,58 @@
+sudo: required
+language: node_js
+services:
+- docker
+node_js:
+- node
+before_install:
+- curl -L https://releases.rancher.com/compose/v0.12.2/rancher-compose-linux-amd64-v0.12.2.tar.gz -o rancher-compose.tar.gz
+- tar -zxvf rancher-compose.tar.gz && mv ./rancher-compose-v0.12.2/rancher-compose ./rancher-compose && rm -fr ./rancher-compose-v0.12.2 && rm ./rancher-compose.tar.gz
+install:
+- cd festyrepasduloup
+- npm install
+- cd ..
+- cd lesloupsgourmands
+- npm install
+- cd ..
+script:
+- cd festyrepasduloup
+- npm run build
+- cd ..
+- cd lesloupsgourmands
+- npm run build
+- cd ..
+after_success:
+- ./rancher-compose -p festyrepasduloup-dev -e dev.env rm -f
+- ./rancher-compose -p lesloupsgourmands-dev -e dev.env rm -f
+- docker build -t krack/festyrepasduloup:test .
+- docker build -t krack/lesloupsgourmands:test .
+- docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+- docker push krack/festyrepasduloup:test
+- docker push krack/lesloupsgourmands:test
+- ./rancher-compose -p festyrepasduloup-dev -f festyrepasduloup/docker-compose.yml -r festyrepasduloup/rancher-compose.yml -e dev.env up -d
+- ./rancher-compose -p lesloupsgourmands-dev -f lesloupsgourmands/docker-compose.yml -r lesloupsgourmands/rancher-compose.yml -e dev.env up -d
+before_deploy:
+- ./rancher-compose -p festyrepasduloup-prod -e prod.env rm -f
+- ./rancher-compose -p lesloupsgourmands-prod -e prod.env rm -f
+- cd festyrepasduloup/dist && zip -ro ../../festyrepasduloup.zip * && cd ../..
+- cd lesloupsgourmands/dist && zip -ro ../../lesloupsgourmands.zip * && cd ../..
+- docker tag krack/festyrepasduloup:test krack/festyrepasduloup:${TRAVIS_TAG}
+- docker tag krack/lesloupsgourmands:test krack/lesloupsgourmands:${TRAVIS_TAG}
+- docker tag krack/festyrepasduloup:${TRAVIS_TAG} krack/festyrepasduloup:latest
+- docker tag krack/lesloupsgourmands:${TRAVIS_TAG} krack/lesloupsgourmands:latest
+- docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+- docker push krack/festyrepasduloup:${TRAVIS_TAG}
+- docker push krack/lesloupsgourmands:${TRAVIS_TAG}
+- docker push krack/yoga-site:latest
+- ./rancher-compose -p festyrepasduloup-prod -f festyrepasduloup/docker-compose.yml -r festyrepasduloup/rancher-compose.yml -e prod.env up -d
+- ./rancher-compose -p lesloupsgourmands-prod -f lesloupsgourmands/docker-compose.yml -r lesloupsgourmands/rancher-compose.yml -e prod.env up -d
+deploy:
+  provider: releases
+  api_key:
+    secure: kpiEwm5DdMGnNrTbJvv/n1fgePXAc8UnlUQ+XOv3EiULKWurNVIPV172m5aSI8sTzaa7qu8PmS0KcQb22k6A48m3tgzNFvib9IoJniCfYHrH2UqQRLQQ+gJiB+dKXDtlwUOH2wCDOeCAieIS7z46bCJcOfQ5nLdRRmJS3BkHp6+xSQEBY5/rOrFxa473RGchMoLbyFfQ7Q/v5nflJXXX0Ln6EGGLx8epnP5GLqTUNQUqbU0lZxU/2ujLrLCBMj1zo1PJVEoHVthL7uXlS/hTZ+1ZOqp0C+2ugXnD6/n7KU7OprwH+cdc7a6HC987NA6aAeWm8i2f8WQLzgc/GAaH3zm+Cr60/0rs4ZxHfs62wU3P7+Y4JBjMOnNFRwSXCNS1QIrqJUxZebYC5jILBq1IStYWZTLRdvgas6ro9JDWRVIEwMLQNvJZ2EG9m7igNe1M1Xtp3p5ucxMS2SIN7t8peosVOYDvItoWvBj/s/QbSn9XEEpmOuo2ty2XI4e5R3ODJ8vbQvvqZgRJLZN4nY3rTC6HPaPdWYZQZ791mkW5lm76ZIpmX76gkafIlefaaQ9S0P/wWj+uthGHH8VQwW5EiyLEUu77XuLwUQuvEh6QnvZz4uC3gKruX+HelasEiO6Z/zAMk4sJiiWrC3rj032q7qAglzIDb8MLQTFPYn8quP4=
+  file: 
+  - festyrepasduloup.zip
+  - lesloupsgourmands.zip
+  skip_cleanup: true
+  on:
+    tags: true
