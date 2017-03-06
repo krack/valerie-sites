@@ -1,6 +1,6 @@
 version: '2'
 services:
-  load-balancer-web:
+  load-balancer:
     scale: 1
     lb_config:
       port_rules:
