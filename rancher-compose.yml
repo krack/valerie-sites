@@ -1,0 +1,20 @@
+version: '2'
+services:
+  load-balancer-festy:
+    scale: 1
+    lb_config:
+      port_rules:
+      - source_port: ${FESTY_HOST_PORT_WEB}
+        target_port: 80
+        service: web-festy
+  web-festy:
+    scale: 1
+  load-balancer-gourmands:
+    scale: 1
+    lb_config:
+      port_rules:
+      - source_port: ${GOURMANDS_HOST_PORT_WEB}
+        target_port: 80
+        service: web-gourmands
+  web-gourmands:
+    scale: 1

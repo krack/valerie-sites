@@ -7,8 +7,8 @@ services:
     restart: never
     working_dir: /usr/src/app
     volumes:
-    - "./festyrepasduloup/:/usr/src/app"
-    command: sh -c 'npm install; npm start'
+    - .:/usr/src/app
+    command: sh -c 'npm install; npm rebuild node-sass; npm run start:gourmands'
   web-gourmand:
     image: node:alpine
     ports:
@@ -16,5 +16,5 @@ services:
     restart: never
     working_dir: /usr/src/app
     volumes:
-    - "./lesloupsgourmands/:/usr/src/app"
-    command: sh -c 'npm install; npm start'
+    - ./:/usr/src/app
+    command: sh -c 'npm install; npm rebuild node-sass; npm run start:festy'
