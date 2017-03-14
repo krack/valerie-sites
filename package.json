@@ -4,8 +4,8 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start:festy": "ng serve --environment=dev.festy --host 0.0.0.0",
-    "start:gourmands": "ng serve --environment=dev.gourmands --host 0.0.0.0",
+    "start:festy": "ng serve --environment=dev.festy --host 0.0.0.0 --port 4200",
+    "start:gourmands": "ng serve --environment=dev.gourmands --host 0.0.0.0 --port 4201",
     "build:festy": "ng build --environment=prod.festy",
     "build:gourmands": "ng build --environment=prod.gourmands",
     "lint": "ng lint"
