@@ -1,0 +1,30 @@
+@import "../variables";
+@import "../themes";
+
+:host{
+	text-align:center;
+	margin-left: 30px;
+	margin-right: 30px;
+	padding-top: 20px;
+	h2{
+		font-size: 12px;
+		font-weight: normal;
+		color: black;
+		&:first-letter{			
+			text-transform: capitalize;
+		}
+		&:after{			
+			content: " : ";
+		}
+	}
+	ul{
+		margin: 0px;
+		padding: 0px;
+		
+	}
+	li{
+		&:first-letter{			
+			text-transform: capitalize;
+		}
+	}
+}

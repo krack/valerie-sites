@@ -1,0 +1,54 @@
+@import "../variables";
+@import "../themes";
+
+:host.inline{
+	margin: auto;
+	display: inline-block;
+	ul{
+		margin: 0;
+		padding: 0;
+		li{
+			font-weight: bold;
+			text-align: left;
+			ul{
+				display: inline;
+				&:before{
+						content: ' : ';
+				}
+				li{
+					font-weight: normal;
+					display: inline;
+					&:after{
+						content: ', ';
+					}
+				}
+				li:last-child{
+					&:after{
+						content: '';
+					}
+				}
+			}
+		}
+	}
+}
+
+:host.inline.center{
+	margin: auto;
+	display: inherit;
+	ul{
+		li{
+			text-align: center;
+		}
+	}
+}
+
+
+ul.salades > li{
+	font-family: $font-family-classique;
+	font-weight: bold;
+	& > ul >li{
+		font-weight: normal;
+		font-family: $font-family-styler;
+	}
+
+}

@@ -1,0 +1,25 @@
+@import "../variables";
+@import "../themes";
+
+:host{
+	text-align:center;
+	margin-left: 30px;
+	margin-right: 30px;
+	padding-top: 20px;
+	h2{
+		color: $rose;
+	}
+	article.pub{
+	font-family: $font-family-styler;
+		h1{
+			color: $violet;
+			font-size: 24px;
+			margin-bottom: 13px;
+		}
+		p{
+			font-size: 18px;
+			color: #444444;
+		}
+	}
+
+}

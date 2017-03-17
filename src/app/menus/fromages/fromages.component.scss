@@ -1,0 +1,33 @@
+@import "../../variables";
+@import "../../themes";
+
+$fromage-size : 250px;
+
+:host{
+	.fromage{
+		position: relative;
+		section{
+		 	position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			ul{
+				margin: 0;
+				padding: 0;
+			}
+			h2{
+				margin: 0;
+				font-size: 12px;
+				color: black;
+				font-family: $font-family-classique;
+			}
+		}
+	}
+	.fromage-background{
+		background-image: url("../../../assets/images/plats/familles-fromage.jpg");
+		opacity: 0.5;
+		width: 100%;
+		height: $fromage-size;
+		display: block;
+	}
+}

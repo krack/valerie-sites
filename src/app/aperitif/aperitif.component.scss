@@ -1,0 +1,14 @@
+@import "../variables";
+@import "../themes";
+@import "../menu";
+
+:host{
+	text-align:center;
+	margin-left: 30px;
+	margin-right: 30px;
+	padding-top: 20px;
+	font-size: 15px;
+	#content{
+		position: relative;
+	}
+}

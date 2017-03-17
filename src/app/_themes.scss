@@ -1,0 +1,28 @@
+h1{
+	font-family: $font-family-styler;
+	color: $rose;
+	font-size: 30px;
+	font-weight: bold;
+
+	margin: 0px;
+	padding: 5% 15% 0;
+}
+h2{
+	font-family: $font-family-styler;
+	color: $rose;
+	font-size: 24px;
+	line-height: 48px;
+	font-weight: bold;
+}
+a{
+	color: $rose;
+	font-family: $font-family-styler;
+	text-decoration: none;
+}
+a:hover{
+	color: $violet;
+}
+
+li{
+	list-style: none;
+}

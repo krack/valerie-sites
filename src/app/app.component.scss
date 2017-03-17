@@ -1,0 +1,117 @@
+@import "variables";
+@import "themes";
+
+@font-face {
+    font-family: "BaroqueScriptRegular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("☺"), url("../assets/font/baroquescript-webfont.woff") format("woff"), url("../assets/font/baroquescript-webfont.ttf") format("truetype"), url("../assets/font/baroquescript-webfont.svg#webfont8IIwfpex") format("svg");
+}
+
+:host{
+	font-family: $font-family-classique;
+
+	background-color: $contentBackground;
+	font-size: 12px;
+	line-height: 22px;
+
+	margin: 0px;
+}
+
+header{
+	height: 180px;
+	
+	background-color: black;
+	h1:before{
+		content: '';
+		background-image: url('../assets/images/theme/arabesque2.png');
+		width: 120px;
+		height: 171px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	h1:after{
+		content: '';
+		background-image: url('../assets/images/theme/photoArabesques.png');
+		width: 84px;
+		height: 150px;
+		position: absolute;
+		top: 20px;
+		left: 70%;
+	}
+	span.description{
+		margin: 2% 15%;
+		color: $violet;
+		font-family: $font-family-styler;
+
+		font-size: 15px;
+	}	
+	span{
+		display: block;
+	}
+}
+
+
+p{
+	margin-top: 13px;
+	margin-bottom: 13px;
+}
+footer{
+	clear: both;
+	display: block;
+}
+
+footer:before{
+	content: '';
+	background-image: url('../assets/images/theme/arabesque3.png');
+	width: 339px;
+	height: 168px;
+	//position: absolute;
+	bottom: 0px;
+	left: 0px;
+	float: left;
+}
+footer:after{
+	content: '';
+	background-image: url('../assets/images/theme/arabesque1.png');
+	width: 120px;
+	height: 171px;
+	//position: absolute;
+	bottom: 0px;
+	right: 0px;
+	float: right;
+}
+
+app-accueil-festy+footer:before, app-accueil-festy+footer:after{
+	position: fixed;
+	float: none;
+}
+
+img{
+	cursor: pointer;
+}
+
+
+
+
+
+
+.apero > section:last-child{
+	text-align: left;
+	margin-top: 30px;
+}
+.desserts {
+	p{
+		font-family: $font-family-styler;
+		text-align: center;
+	}
+	li{
+		line-height: 30px;
+	}
+	.menu div{
+		margin-bottom: 25px;
+	}
+}
+
+

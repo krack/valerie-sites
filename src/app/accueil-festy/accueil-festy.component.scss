@@ -1,0 +1,40 @@
+@import "../variables";
+@import "../themes";
+
+:host{
+	text-align:center;
+	margin-left: 30px;
+	margin-right: 30px;
+	padding-top: 20px;
+	font-size: 15px;
+	p{
+	    font-style: italic;
+	    margin-top: 10px;
+	    color: 	#4F4F4F;
+	}
+	ul{
+		font-family: $font-family-styler;
+		color: #333366;
+		text-align: left;
+		margin-bottom: 30px;
+		margin-left:50px;
+		margin-top: 50px;
+	}
+	li{
+		margin-bottom: 10px;
+	}
+	li+li{
+		margin-left: 20px;
+	}
+	li+li+li{
+		margin-left: 40px;
+	}
+	li+li+li+li{
+		margin-left: 60px;
+	}
+	li+li+li+li+li{
+		margin-left: 80px;
+	}
+
+	
+}
