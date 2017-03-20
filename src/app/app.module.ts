@@ -25,6 +25,11 @@ import { SaladesComponent } from './salades/salades.component';
 import { AutresServicesComponent } from './autres-services/autres-services.component';
 import { ContactComponent } from './contact/contact.component';
 import { NavigationFestyComponent } from './navigation-festy/navigation-festy.component';
+import { NavigationGourmandsComponent } from './navigation-gourmands/navigation-gourmands.component';
+import { AccueilGourmandsComponent } from './accueil-gourmands/accueil-gourmands.component';
+import { RepasOuvriersComponent } from './repas-ouvriers/repas-ouvriers.component';
+import { BarEpicerieComponent } from './bar-epicerie/bar-epicerie.component';
+import { RepasGroupesComponent } from './repas-groupes/repas-groupes.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +53,12 @@ import { NavigationFestyComponent } from './navigation-festy/navigation-festy.co
     SaladesComponent,
     AutresServicesComponent,
     ContactComponent,
-    NavigationFestyComponent
+    NavigationFestyComponent,
+    NavigationGourmandsComponent,
+    AccueilGourmandsComponent,
+    RepasOuvriersComponent,
+    BarEpicerieComponent,
+    RepasGroupesComponent
   ],
   imports: [
     BrowserModule,

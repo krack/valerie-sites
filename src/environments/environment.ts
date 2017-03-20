@@ -7,5 +7,7 @@ export const environment = {
   production: false,
   siteNumber: 0,
   rootClass: '',
-  htmlTitle: ''
+  htmlTitle: '',
+  siteName : '',
+  siteDescribe: ''
 };

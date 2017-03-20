@@ -1,12 +1,13 @@
 <header>
 	<h1>
-		<span class="name">Festy repas du loup</span>
-		<span class="description">Offrez-vous les services d’un chef à domicile!</span>
+		<span class="name">{{siteName}}</span>
+		<span class="description">{{siteDescribe}}</span>
 	</h1>
 	<div id="portrait"></div>
 </header>
 
-<navigation-festy></navigation-festy>
+<navigation-festy *ngIf="navigationMenu=='festy'"></navigation-festy>
+<navigation-gourmands *ngIf="navigationMenu=='gourmands'"></navigation-gourmands>
 
 <router-outlet></router-outlet>
 

@@ -1,0 +1,22 @@
+<nav>
+	<a routerLink="/accueil" routerLinkActive="active">accueil</a>
+	<a routerLink="/repas-ouvriers" routerLinkActive="active">repas ouvriers</a>
+	<a routerLink="/repas-groupes" routerLinkActive="active">repas de groupes
+		<ul>
+			<li><a routerLink="/aperitif" routerLinkActive="active" (click)="clicked($event)" >apéritif</a></li>
+			<li><a routerLink="/menus/louise" routerLinkActive="active" (click)="clicked($event)" >menu Louise</a></li>
+			<li><a routerLink="/menus/agathe" routerLinkActive="active" (click)="clicked($event)" >menu Agathe</a></li>
+			<li><a routerLink="/menus/bertille" routerLinkActive="active" (click)="clicked($event)" >menu Bertille</a></li>
+			<li><a routerLink="/menus/alice" routerLinkActive="active" (click)="clicked($event)" >menu Alice</a></li>
+			<li><a routerLink="/menus/desserts" routerLinkActive="active" (click)="clicked($event)" >carte des desserts</a></li>
+			<li><a routerLink="/buffets/jeanne" routerLinkActive="active" (click)="clicked($event)">buffet Jeanne</a></li>
+			<li><a routerLink="/buffets/justine" routerLinkActive="active" (click)="clicked($event)">buffet Justine</a></li>
+			<li><a routerLink="/buffets/lina" routerLinkActive="active" (click)="clicked($event)">buffet Lina</a></li>
+			<li><a routerLink="/buffets/marie" routerLinkActive="active"(click)="clicked($event)">buffet Marie</a></li>
+			<li><a routerLink="/buffets/autre" routerLinkActive="active" (click)="clicked($event)">autres</a></li>
+		</ul>
+	</a>
+	
+	<a routerLink="/bar-epicerie" routerLinkActive="active">Bar & épicerie</a>
+	<a routerLink="/contact" routerLinkActive="active">portrait & contact</a>
+</nav>
