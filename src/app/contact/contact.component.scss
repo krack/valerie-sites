@@ -1,6 +1,10 @@
 @import "../variables";
 @import "../themes";
 
+//$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts";
+$fa-font-path: "~font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome.scss';
+
 :host{
 	text-align:center;
 	margin-left: 30px;
@@ -17,8 +21,6 @@
 		display: block;
 	}
 	address{
-		float: left;
-		width: 33%;
 		margin-top: 20px;
 	}
 	address+address span{
@@ -27,6 +29,10 @@
 	a{
 		font-style: italic;
 		font-family: $font-family-classique;
+		width: 100%;
+	}
+	p[itemprop="description"]{
+		margin-top: 20px;
 	}
 	span[itemprop="postalCode"]{
 		display: inline;
@@ -37,5 +43,69 @@
 
 	.presentation{
 		width: 20%;
+		position: absolute;
+		left:7%;
 	}
+
+	.presentation + .presentation{
+		width: 20%;
+		position: absolute;
+		left:inherit;
+		right: 7%;
+	}
+
+	a[href^="tel:0"]{
+		@extend .fa;
+    	@extend .fa-phone;
+    	&:before{
+    		margin-right: 5px;
+    		font-size: 1.5em;
+    	}
+	}
+	a[href^="tel:06"],a[href^="tel:07"]{
+		@extend .fa;
+    	@extend .fa-mobile;
+    	&:before{
+    		margin-right: 5px;
+    		font-size: 1.5em;
+    	}
+	}
+
+	a[href^="mailto:"]{
+		@extend .fa;
+    	@extend .fa-envelope-o;
+    	&:before{
+    		margin-right: 5px;
+    		font-size: 1.5em;
+    	}
+	}
+
+	a[href^="http:"],a[href^="https:"]{
+		@extend .fa;
+    	@extend .fa-globe;
+    	&:before{
+    		margin-right: 5px;
+    		font-size: 1.5em;
+    	}
+	}
+	a[href^="https://www.facebook.com/"], a[href^="http://www.facebook.com/"]{
+		@extend .fa;
+    	@extend .fa-facebook-official;	
+    	&:before{
+    		color: #3b5998;
+    		font-size: 1.5em;
+    	}
+
+	}
+
+	@media all and (max-width: 768px){
+		address{
+			width: 100%;
+			float: none;
+		}
+		img.presentation{
+			display: none;
+		}
+	}
+
 }
