@@ -7,12 +7,9 @@ import { environment } from '../environments/environment';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-	title = 'app works!';
-	env:number;
 	@HostBinding('class.root_'+environment.rootClass) 
  	addRootClasd:boolean = true;
 
  	public constructor(){
- 		this.env = environment.siteNumber;
  	}
 }

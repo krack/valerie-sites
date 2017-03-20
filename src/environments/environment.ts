@@ -6,5 +6,6 @@
 export const environment = {
   production: false,
   siteNumber: 0,
-  rootClass: ''
+  rootClass: '',
+  htmlTitle: ''
 };

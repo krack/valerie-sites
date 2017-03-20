@@ -1,5 +1,6 @@
 export const environment = {
   production: false,
   siteNumber: 2,
-  rootClass: 'gourmands'
+  rootClass: 'gourmands',
+  htmlTitle: ''
 };

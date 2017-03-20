@@ -99,9 +99,16 @@ if(environment.siteNumber == 1){
 		component: ContactComponent
 	});
 
+	routes.push({ path: '',
+		redirectTo: '/accueil',
+		pathMatch: 'full'
+	});
+
 }else if(environment.siteNumber == 2){
 	
 }
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

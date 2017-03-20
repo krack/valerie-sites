@@ -67,7 +67,6 @@ footer:before{
 	background-image: url('../assets/images/theme/arabesque3.png');
 	width: 339px;
 	height: 168px;
-	//position: absolute;
 	bottom: 0px;
 	left: 0px;
 	float: left;
@@ -77,13 +76,12 @@ footer:after{
 	background-image: url('../assets/images/theme/arabesque1.png');
 	width: 120px;
 	height: 171px;
-	//position: absolute;
 	bottom: 0px;
 	right: 0px;
 	float: right;
 }
 
-app-accueil-festy+footer:before, app-accueil-festy+footer:after{
+accueil-festy+footer:before, accueil-festy+footer:after{
 	position: fixed;
 	float: none;
 }
@@ -91,27 +89,3 @@ app-accueil-festy+footer:before, app-accueil-festy+footer:after{
 img{
 	cursor: pointer;
 }
-
-
-
-
-
-
-.apero > section:last-child{
-	text-align: left;
-	margin-top: 30px;
-}
-.desserts {
-	p{
-		font-family: $font-family-styler;
-		text-align: center;
-	}
-	li{
-		line-height: 30px;
-	}
-	.menu div{
-		margin-bottom: 25px;
-	}
-}
-
-

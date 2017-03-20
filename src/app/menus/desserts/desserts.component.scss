@@ -11,4 +11,17 @@
 	#content{
 		position: relative;
 	}
+	.desserts {
+		p{
+			font-family: $font-family-styler;
+			text-align: center;
+		}
+		li{
+			line-height: 30px;
+		}
+		.menu div{
+			margin-bottom: 25px;
+		}
+	}
+
 }
