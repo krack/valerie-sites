@@ -86,6 +86,14 @@ accueil-festy+footer:before, accueil-festy+footer:after{
 	float: none;
 }
 
-img{
-	cursor: pointer;
+
+@media all and (max-width: 768px){
+	header h1:before, header h1:after, footer:before, footer:after{
+		display: none;
+	}
+	header{
+		span.description{
+			margin: 20px 0% 0% 0%;
+		}
+	}
 }

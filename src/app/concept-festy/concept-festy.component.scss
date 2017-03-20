@@ -60,4 +60,27 @@
 		width: 400px;
 	}
 
+	@media all and (max-width: 768px){
+		h2{
+			width: 100%;
+	    	line-height:30px;
+		}
+		section{
+			h3{
+				font-size: 18px;
+			}
+		}
+		section.concept{
+			p{
+				width: 100%;
+			}
+
+		}
+		section.demarche{
+			>div{
+				width: inherit;
+			}
+		}
+	}
+
 }

@@ -22,4 +22,10 @@
 		}
 	}
 
+	@media all and (max-width: 768px){
+		article.pub h1{
+			font-size: 20px;
+		}
+	}
+
 }

@@ -36,5 +36,24 @@
 		margin-left: 80px;
 	}
 
-	
+	@media all and (max-width: 768px){
+		margin-left: 0px;
+		margin-right: 0px;
+		li{
+			margin-bottom: 5px;
+		}
+		li+li{
+			margin-left: 10px;
+		}
+		li+li+li{
+			margin-left: 15px;
+		}
+		li+li+li+li{
+			margin-left: 20px;
+		}
+		li+li+li+li+li{
+			margin-left: 25px;
+		}
+
+	}	
 }

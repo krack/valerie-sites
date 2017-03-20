@@ -83,8 +83,7 @@
 	    margin: 13px 0px;
 	    &>ul{
 	    	font-family: $font-family-styler;
-
-	    				font-weight: normal;
+			font-weight: normal;
 	    	&>li{
 	    		&>ul{
 	    			display: inline;
@@ -120,4 +119,33 @@ figure{
 		margin-bottom: 15px;	
 		max-width: 150px;
 	}
+}
+
+@media all and (max-width: 768px){
+	.menu-page{
+		h2{
+			font-size: 1.5em;
+		}
+		> p{
+			font-size: 1em;
+			font-family: $font-family-classique;
+		}
+	}
+	.menu{
+	    font-family: $font-family-classique;
+	    width: 100%;
+	    padding: 0px;
+	    border-style: solid none solid none;
+	}
+	.menu-page.buffet .menu{
+		&>ul >li{
+			font-family: $font-family-classique;
+	  
+		    &>ul{
+		    	font-family: $font-family-classique;
+		    }
+		}
+	}
+
+	
 }

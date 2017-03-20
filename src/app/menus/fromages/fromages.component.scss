@@ -30,4 +30,12 @@ $fromage-size : 250px;
 		height: $fromage-size;
 		display: block;
 	}
+	@media all and (max-width: 768px){
+		&{
+			display: none;
+		}
+		h2{
+			line-height: 24px;
+		}
+	}
 }

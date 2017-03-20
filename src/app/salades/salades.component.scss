@@ -52,3 +52,12 @@ ul.salades > li{
 	}
 
 }
+
+@media all and (max-width: 768px){
+	ul.salades > li{
+		& > ul >li{
+			font-family: $font-family-classique;
+		}
+
+	}
+}
