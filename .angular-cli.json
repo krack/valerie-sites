@@ -9,9 +9,7 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico",
-        "www.festyrepasduloup.com.index.html",
-        "beta.festyrepasduloup.com.index.html"
+        "favicon.ico"
       ],
       "index": "index.html",
       "main": "main.ts",
