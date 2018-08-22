@@ -1,0 +1,46 @@
+@import "../variables";
+@import "../themes";
+
+p{
+    text-align: center;
+    font-family: $font-family-styler;
+    color: $violet;
+    display: block;
+}
+
+img{
+    margin: 10px;
+}
+.interieur{
+    width: 600px;
+    float: left;
+    + p{
+        text-align: center;
+        float: left;
+    }
+    + p + *{
+        clear: both;
+    }
+}
+
+
+.plat{
+    float: right;
+    + p{
+        text-align: center;
+        float: right;
+    }
+    + p + *{
+
+        clear: both;
+    }
+}
+
+.plat1{
+
+    width: 400px;
+}
+.plat2{
+
+    width: 400px;
+}

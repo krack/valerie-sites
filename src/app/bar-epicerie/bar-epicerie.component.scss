@@ -1,0 +1,14 @@
+@import "../variables";
+@import "../themes";
+
+.epicerie{
+    width: 400px;
+    float: right;
+}
+
+p{
+    text-align: center;
+    font-family: $font-family-styler;
+    color: $violet;
+    display: block;
+}

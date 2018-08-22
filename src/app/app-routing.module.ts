@@ -33,158 +33,160 @@ import { ContactComponent } from './contact/contact.component';
 const routes: Routes = [
 ];
 
-if(environment.siteNumber == 1){
+if (environment.siteNumber == 1) {
 	routes.push({
-		path: 'accueil', 
+		path: 'accueil',
 		component: AccueilFestyComponent
 	});
 	routes.push({
-		path: 'concept', 
+		path: 'concept',
 		component: ConceptFestyComponent
 	});
 	routes.push({
-		path: 'aperitif', 
+		path: 'aperitif',
 		component: AperitifComponent
 	});
 	routes.push({
-		path: 'menus', 
+		path: 'menus',
 		component: MenuFestyComponent
 	});
 	routes.push({
-		path: 'menus/louise', 
+		path: 'menus/louise',
 		component: MenuLouiseComponent
 	});
 	routes.push({
-		path: 'menus/agathe', 
+		path: 'menus/agathe',
 		component: MenuAgatheComponent
 	});
 	routes.push({
-		path: 'menus/bertille', 
+		path: 'menus/bertille',
 		component: MenuBertilleComponent
 	});
 	routes.push({
-		path: 'menus/alice', 
+		path: 'menus/alice',
 		component: MenuAliceComponent
 	});
 	routes.push({
-		path: 'menus/desserts', 
+		path: 'menus/desserts',
 		component: DessertsComponent
 	});
 
 	routes.push({
-		path: 'buffets', 
+		path: 'buffets',
 		component: BuffetsComponent
 	});
 	routes.push({
-		path: 'buffets/jeanne', 
+		path: 'buffets/jeanne',
 		component: BuffetJeanneComponent
 	});
 	routes.push({
-		path: 'buffets/justine', 
+		path: 'buffets/justine',
 		component: BuffetJustineComponent
 	});
 	routes.push({
-		path: 'buffets/lina', 
+		path: 'buffets/lina',
 		component: BuffetLinaComponent
 	});
 	routes.push({
-		path: 'buffets/marie', 
+		path: 'buffets/marie',
 		component: BuffetMarieComponent
 	});
 	routes.push({
-		path: 'buffets/autre', 
+		path: 'buffets/autre',
 		component: BuffetAutreComponent
 	});
 	routes.push({
-		path: 'autre-services', 
+		path: 'autre-services',
 		component: AutresServicesComponent
 	});
 
 	routes.push({
-		path: 'contact', 
+		path: 'contact',
 		component: ContactComponent
 	});
 
-	routes.push({ path: '',
+	routes.push({
+		path: '',
 		redirectTo: '/accueil',
 		pathMatch: 'full'
 	});
 
-}else if(environment.siteNumber == 2){
+} else if (environment.siteNumber == 2) {
 	routes.push({
-		path: 'accueil', 
+		path: 'accueil',
 		component: AccueilGourmandsComponent
 	});
 	routes.push({
-		path: 'repas-ouvriers', 
+		path: 'restaurant',
 		component: RepasOuvriersComponent
 	});
 
 	routes.push({
-		path: 'repas-groupes', 
+		path: 'repas-groupes',
 		component: RepasGroupesComponent
 	});
 	routes.push({
-		path: 'aperitif', 
+		path: 'aperitif',
 		component: AperitifComponent
 	});
 
 	routes.push({
-		path: 'menus/louise', 
+		path: 'menus/louise',
 		component: MenuLouiseComponent
 	});
 	routes.push({
-		path: 'menus/agathe', 
+		path: 'menus/agathe',
 		component: MenuAgatheComponent
 	});
 	routes.push({
-		path: 'menus/bertille', 
+		path: 'menus/bertille',
 		component: MenuBertilleComponent
 	});
 	routes.push({
-		path: 'menus/alice', 
+		path: 'menus/alice',
 		component: MenuAliceComponent
 	});
 	routes.push({
-		path: 'menus/desserts', 
+		path: 'menus/desserts',
 		component: DessertsComponent
 	});
 
 	routes.push({
-		path: 'buffets', 
+		path: 'buffets',
 		component: BuffetsComponent
 	});
 	routes.push({
-		path: 'buffets/jeanne', 
+		path: 'buffets/jeanne',
 		component: BuffetJeanneComponent
 	});
 	routes.push({
-		path: 'buffets/justine', 
+		path: 'buffets/justine',
 		component: BuffetJustineComponent
 	});
 	routes.push({
-		path: 'buffets/lina', 
+		path: 'buffets/lina',
 		component: BuffetLinaComponent
 	});
 	routes.push({
-		path: 'buffets/marie', 
+		path: 'buffets/marie',
 		component: BuffetMarieComponent
 	});
 	routes.push({
-		path: 'buffets/autre', 
+		path: 'buffets/autre',
 		component: BuffetAutreComponent
 	});
 	routes.push({
-		path: 'bar-epicerie', 
+		path: 'bar-epicerie',
 		component: BarEpicerieComponent
 	});
 
 	routes.push({
-		path: 'contact', 
+		path: 'contact',
 		component: ContactComponent
 	});
 
-	routes.push({ path: '',
+	routes.push({
+		path: '',
 		redirectTo: '/accueil',
 		pathMatch: 'full'
 	});
@@ -193,8 +195,8 @@ if(environment.siteNumber == 1){
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-  providers: []
+	imports: [RouterModule.forRoot(routes)],
+	exports: [RouterModule],
+	providers: []
 })
 export class AppRoutingModule { }

@@ -1,0 +1,27 @@
+@import "../variables";
+@import "../themes";
+
+p{
+    text-align: center;
+    font-family: $font-family-styler;
+    color:$rose;
+    font-size: 2em;
+    line-height: 200%; 
+    display: block;
+}
+
+.terrasse{
+    margin: 10px; 
+    width: 300px;
+    float: left;
+}
+.visit-card{
+
+    width: 300px;
+    float: right;
+    margin: 10px;
+}
+
+@media all and (max-width: 768px){
+    font-size: 1.5em;
+}

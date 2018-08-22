@@ -5,7 +5,7 @@ services:
     ports:
     - 4200:4200
     - 4201:4201
-    restart: never
+    restart: always
     working_dir: /usr/src/app
     volumes:
     - .:/usr/src/app
