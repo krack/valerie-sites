@@ -30,7 +30,9 @@ before_deploy:
 - docker tag krack/lesloupsgourmands:${TRAVIS_TAG} krack/lesloupsgourmands:latest
 - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
 - docker push krack/festyrepasduloup:${TRAVIS_TAG}
+- docker push krack/festyrepasduloup:latest
 - docker push krack/lesloupsgourmands:${TRAVIS_TAG}
+- docker push krack/lesloupsgourmands:latest
 - ./rancher-compose -p valerie-sites-prod -f docker-compose.yml -r rancher-compose.yml -e prod.env up -d
 deploy:
   provider: releases
