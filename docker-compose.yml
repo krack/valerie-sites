@@ -3,9 +3,11 @@ services:
   load-balancer-festy:
     ports:
     - ${FESTY_HOST_PORT_WEB}
-    image: rancher/lb-service-haproxy:v0.5.9
+    image: rancher/lb-service-haproxy:v0.9.4
     labels:
-      proxy_url: ${FESTY_EXPOSE_URL}
+      rap.host: ${FESTY_EXPOSE_URL}
+      rap.le_host: ${FESTY_EXPOSE_URL}
+      rap.port: ${FESTY_HOST_PORT_WEB}
   web-festy:
     image: krack/festyrepasduloup:${TAG}
     restart: always
@@ -14,9 +16,11 @@ services:
   load-balancer-gourmands:
     ports:
     - ${GOURMANDS_HOST_PORT_WEB}
-    image: rancher/lb-service-haproxy:v0.5.9
+    image: rancher/lb-service-haproxy:v0.9.4
     labels:
-      proxy_url: ${GOURMANDS_EXPOSE_URL}
+      rap.host: ${GOURMANDS_EXPOSE_URL}
+      rap.le_host: ${GOURMANDS_EXPOSE_URL}
+      rap.port: ${GOURMANDS_HOST_PORT_WEB}
   web-gourmands:
     image: krack/lesloupsgourmands:${TAG}
     restart: always
