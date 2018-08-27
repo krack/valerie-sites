@@ -1,151 +1,154 @@
-
-
-.menu{
-	font-size: 0.8em;
-	background-color: #E6E6FF;
-    border: 1px solid black;
-    border-radius: 10px 10px 10px 10px;
-	font-family: $font-family-styler;
-    margin: 40px auto auto;
-    text-align: center;
-    width: 50%;
-    padding: 10px;
-    margin-bottom: 20px;
-    h3{
-		font-weight: bold;
-		font-size: 1.1em;
-	}
-}
-.menu .price{
-	background-color: $rose;
-	width: 150px;
-    border-radius: 5px 5px 5px 5px;
-    display: block;
-    float: right;
-    height: 25px;
-    margin: 5px 10px 5px 5px;
-    clear: right;
-
-}
-.menu li, .menu h3{
-	clear: both;
-}
-
-.menu h2{
-	font-family: $font-family-classique;
+.menu {
+  font-size: 0.8em;
+  background-color: #E6E6FF;
+  border: 1px solid black;
+  border-radius: 10px 10px 10px 10px;
+  font-family: $font-family-styler;
+  margin: 40px auto auto;
+  text-align: center;
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 20px;
+  h3 {
     font-weight: bold;
-    font-size:	12px;
-	line-height: 17px;
+    font-size: 1.1em;
+  }
+}
+
+.menu .price {
+  background-color: $rose;
+  width: 150px;
+  border-radius: 5px 5px 5px 5px;
+  display: block;
+  float: right;
+  height: 25px;
+  margin: 5px 10px 5px 5px;
+  clear: right;
+}
+
+.menu li,
+.menu h3 {
+  clear: both;
+}
+
+.menu h2 {
+  font-family: $font-family-classique;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 17px;
+  color: black;
+  margin-top: 10px;
+}
+
+.menu-page {
+  >h2 {
+    font-size: 46px;
+    line-height: 48px;
+    margin-top: 30px;
+  }
+  h2 {
+    &:first-letter {
+      text-transform: capitalize;
+    }
+  }
+  >p {
+    color: $violet;
+    font-size: 22px;
+    line-height: 22px;
+    font-family: $font-family-styler;
+    font-weight: bold;
+    &:first-letter {
+      text-transform: capitalize;
+    }
+  }
+  li {
+    list-style: none;
+    &:first-letter {
+      text-transform: capitalize;
+    }
+  }
+  .menu ul>li>ul>li {}
+}
+
+.menu-page.buffet .menu {
+  .price+.price {
+    width: auto;
+  }
+  &>ul>li {
+    font-family: $font-family-classique;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 17px;
     color: black;
-    margin-top: 10px;
-}
-.menu-page{
-	> h2{
-		font-size: 46px;
-		line-height: 48px;
-		margin-top: 30px;
-	}
-	h2{
-		&:first-letter{
-			text-transform: capitalize;
-		}
-	}
-	> p{
-		color: $violet;
-		font-size: 22px;
-		line-height: 22px;
-		font-family: $font-family-styler;
-		font-weight: bold;
-		&:first-letter{
-			text-transform: capitalize;
-		}
-	}
-	li{
-		list-style: none;
-		&:first-letter{
-			text-transform: capitalize;
-		}
-	}
-	.menu ul> li >ul >li{
-
-	}
-}
-.menu-page.buffet .menu{
-	.price + .price{
-		width: auto;
-	}
-	&>ul >li{
-		font-family: $font-family-classique;
-	    font-weight: bold;
-	    font-size:	12px;
-		line-height: 17px;
-	    color: black;
-	    margin: 13px 0px;
-	    &>ul{
-	    	font-family: $font-family-styler;
-			font-weight: normal;
-	    	&>li{
-	    		&>ul{
-	    			display: inline;
-	    			&:before{
-	    				content: " : ";
-	    			}
-	    			&>li{
-	    				display: inline;
-	    				&:after{
-	    					content: ", ";
-	    				}
-	    			}
-	    			&>li:last-child{
-	    				&:after{
-	    					content: "";
-	    				}
-	    			}
-	    		}
-				&:first-letter{
-					text-transform: lowercase;
-				}
-	    	}
-	    }
-
-	}
-}
-figure{
-	position: absolute;
-	right: 60px;
-	top: 100px;
-	img{
-		display: block;
-		margin-bottom: 15px;	
-		max-width: 150px;
-	}
+    margin: 13px 0px;
+    &>ul {
+      font-family: $font-family-styler;
+      font-weight: normal;
+      &>li {
+        &>ul {
+          display: inline;
+          &:before {
+            content: " : ";
+          }
+          &>li {
+            display: inline;
+            &:after {
+              content: ", ";
+            }
+          }
+          &>li:last-child {
+            &:after {
+              content: "";
+            }
+          }
+        }
+        &:first-letter {
+          text-transform: lowercase;
+        }
+      }
+    }
+  }
 }
 
-@media all and (max-width: 768px){
-	.menu-page{
-		h2{
-			font-size: 1.5em;
-		}
-		> p{
-			font-size: 1em;
-			font-family: $font-family-classique;
-		}
-	}
-	.menu{
-	    font-family: $font-family-classique;
-	    width: 100%;
-	    padding: 0px;
-	    border-style: solid none solid none;
-	}
-	.menu-page.buffet .menu{
-		&>ul >li{
-			font-family: $font-family-classique;
-	  
-		    &>ul{
-		    	font-family: $font-family-classique;
-		    }
-		}
-	}
+figure {
+  position: absolute;
+  right: 60px;
+  top: 100px;
+  img {
+    display: block;
+    margin-bottom: 15px;
+    max-width: 150px;
+  }
+}
 
-	
+.highlighted h2 {
+  font-weight: bolder;
+  font-size: 120%;
+  color: $violet2;
+}
+
+@media all and (max-width: 768px) {
+  .menu-page {
+    h2 {
+      font-size: 1.5em;
+    }
+    >p {
+      font-size: 1em;
+      font-family: $font-family-classique;
+    }
+  }
+  .menu {
+    font-family: $font-family-classique;
+    width: 100%;
+    padding: 0px;
+    border-style: solid none solid none;
+  }
+  .menu-page.buffet .menu {
+    &>ul>li {
+      font-family: $font-family-classique;
+      &>ul {
+        font-family: $font-family-classique;
+      }
+    }
+  }
 }
