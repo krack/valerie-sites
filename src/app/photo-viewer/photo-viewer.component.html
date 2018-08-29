@@ -1,0 +1,7 @@
+<div *ngIf="visible" class="popin">
+	<button (click)="closePopin()" class="close">close</button>
+	<h1>{{current?.title}}</h1>
+	<img [src]="'assets/images/'+current?.src" [alt]="current?.title" />
+	<button (click)="changePhoto(-1)" class="preview">preview</button>
+	<button (click)="changePhoto(1)" class="next">next</button>
+</div>

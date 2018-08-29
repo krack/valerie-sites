@@ -1,0 +1,152 @@
+[
+    {
+        "id": "apero1",
+        "title": "Plateau apéritif",
+        "src": "plats/plateau_aperitif.jpg"
+    },
+    {
+        "id": "apero2",
+        "title": "Plateau apéritif",
+        "src": "plats/plateau_aperitif_2.jpg"
+    },
+    {
+        "id": "apero3",
+        "title": "Plateau apéritif",
+        "src": "plats/plateau_aperitif_3.jpg"
+    },
+    {
+        "id": "apero4",
+        "title": "Plateau apéritif",
+        "src": "plats/plateau_aperitif_4.jpg"
+    },
+    {
+        "id": "apero5",
+        "title": "Plateau apéritif",
+        "src": "plats/plateau_aperitif_5.jpg"
+    },
+    {
+        "id": "apero6",
+        "title": "Plateau apéritif",
+        "src": "plats/plateau_aperitif_6.jpg"
+    },
+    {
+        "id": "apero7",
+        "title": "Plateau apéritif",
+        "src": "plats/plateau_aperitif_7.jpg"
+    },
+    {
+        "id": "apero8",
+        "title": "Plateau apéritif",
+        "src": "plats/plateau_aperitif_8.jpg"
+    },
+    {
+        "id": "apero-mini-burger",
+        "title": "minis Burger",
+        "src": "plats/mini_burger.jpg"
+    },
+    {
+        "id": "apero-panier-crudites",
+        "title": "Panier de crudités et ses sauces",
+        "src": "plats/panier_crudites.jpg"
+    },
+    {
+        "id": "apero-tomate-confite",
+        "title": "féta marinée & tomate cerise confite",
+        "src": "plats/tomate_confite.jpg"
+    },
+    {
+        "id": "entree-farandole-saumon",
+        "title": "farandole de Saumon",
+        "src": "plats/farandole_saumont.jpg"
+    },
+    {
+        "id": "entree-vol-escargot",
+        "title": "vol au vent d’escargots au Chablis",
+        "src": "plats/vol_au_vent_escargots_chablis.jpg"
+    },
+    {
+        "id": "entree-tatin-boudin",
+        "title": "tatin de boudin noir",
+        "src": "plats/tatin_boudin_noir.JPG"
+    },
+    {
+        "id": "entree-terrine-poisson",
+        "title": "Terrine de poisson, asperges vertes & carottes, sauce ciboulette",
+        "src": "plats/terrine_poisson.jpg"
+    },
+    {
+        "id": "poisson-filet",
+        "title": "filet de poisson au Noilly Prat et fondue de poireau",
+        "src": "plats/filet_poisson.jpg"
+    },
+    {
+        "id": "viande-gambas-poulet",
+        "title": "bouchées de Gambas et poulet, sauce mangue-passion",
+        "src": "plats/gambas-poulet.jpg"
+    },
+    {
+        "id": "viande-caille-farcie",
+        "title": "caille farcie au Foie gras, Sauce aux Cèpes, Petits légumes de Saison",
+        "src": "plats/caille_foie_gras.jpg"
+    },
+    {
+        "id": "viande-supreme-pintade",
+        "title": "suprème de Pintade farci aux girolles",
+        "src": "plats/supreme_pintade.jpg"
+    },
+    {
+        "id": "viande-cote-agneau",
+        "title": "côte d’Agneau en habit doré, purée de patate douce",
+        "src": "plats/cote_agneau.jpg"
+    },
+    {
+        "id": "viande-magret-canard",
+        "title": "magret de Canard aux pèches rôties, sauce aigre douce aux groseilles",
+        "src": "plats/magret_canard.jpg"
+    },
+    {
+        "id": "viande-poulet-cepes",
+        "title": "fondant de Poulet farci, sauce aux cèpes",
+        "src": "plats/fondant_poulet_cepes.jpg"
+    },
+    {
+        "id": "entree-foie-volaille",
+        "title": "fondant de foies de volaille et toasts tièdes",
+        "src": "plats/fondant-foie-de-volaille.jpg"
+    },
+    {
+        "id": "salade-piemontaise",
+        "title": "Salade Piémontaise ",
+        "src": "plats/salades/piemontaise.jpg"
+    },
+    {
+        "id": "salade-multicolore",
+        "title": "Salade Multicolore",
+        "src": "plats/salades/multicolore.jpg"
+    },
+    {
+        "id": "salade-taboule",
+        "title": "Salade Taboulé ",
+        "src": "plats/salades/taboule.jpg"
+    },
+    {
+        "id": "salade-ananas",
+        "title": "Salade à l'Ananas farcis",
+        "src": "plats/salades/ananas-farcis.jpg"
+    },
+    {
+        "id": "salade-canard",
+        "title": "Salade de Canard",
+        "src": "plats/salades/canard.jpg"
+    },
+    {
+        "id": "salade-tagliatelles",
+        "title": "Salade de Tagliatelles",
+        "src": "plats/salades/tagliatelles.jpg"
+    },
+    {
+        "id": "salade-charcutiere",
+        "title": "Salade Charcutiere",
+        "src": "plats/salades/charcutiere.jpg"
+    }
+]

@@ -1,0 +1,13 @@
+@import "../variables";
+@import "../themes";
+@import "../menu";
+
+//$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts";
+$fa-font-path: "~font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome.scss';
+
+:host{
+	@extend .fa;
+	@extend .fa-camera;
+	color: $rose;
+}

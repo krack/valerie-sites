@@ -29,6 +29,9 @@ import { RepasGroupesComponent } from './repas-groupes/repas-groupes.component';
 import { RepasOuvriersComponent } from './repas-ouvriers/repas-ouvriers.component';
 import { SaladesComponent } from './salades/salades.component';
 
+import { PhotoViewerComponent } from './photo-viewer/photo-viewer.component';
+import { PhotoExistComponent } from './photo-exist/photo-exist.component';
+
 
 @NgModule({
   declarations: [
@@ -56,7 +59,9 @@ import { SaladesComponent } from './salades/salades.component';
     AccueilGourmandsComponent,
     RepasOuvriersComponent,
     BarEpicerieComponent,
-    RepasGroupesComponent
+    RepasGroupesComponent,
+    PhotoViewerComponent,
+    PhotoExistComponent
   ],
   imports: [
     BrowserModule,

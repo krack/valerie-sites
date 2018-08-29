@@ -1,3 +1,7 @@
+//$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts";
+$fa-font-path: "~font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome.scss';
+
 h1{
 	font-family: $font-family-styler;
 	color: $rose;
@@ -36,6 +40,12 @@ ul{
 	margin: 0;
 	padding: 0;
 }
+
+h2[view]{
+	@extend .fa;
+	@extend .fa-times;
+}
+
 
 
 @media all and (max-width: 768px){
