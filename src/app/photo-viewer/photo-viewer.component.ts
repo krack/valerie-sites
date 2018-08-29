@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, AfterViewInit, HostListener } from '@angular/core';
 import * as $ from 'jquery';
 import { Photo } from './Photo';
 import { Http, Response } from '@angular/http';
@@ -20,6 +20,25 @@ export class PhotoViewerComponent implements OnInit {
 		this.visible = false;
 	}
 
+	@HostListener('document:keypress', ['$event'])
+	handleKeyboardEvent(event: KeyboardEvent) {
+		if (this.visible) {
+			console.log(event.key);
+
+			switch (event.key) {
+				case 'ArrowLeft':
+					this.changePhoto(-1);
+					break;
+				case 'ArrowRight':
+				case ' ':
+					this.changePhoto(1);
+					break;
+				case 'Escape':
+					this.closePopin();
+					break;
+			}
+		}
+	}
 	private loadData(http: Http): void {
 		http.get('/assets/photos.json').subscribe((res: Response) => {
 			this.all = res.json() || {};
