@@ -23,7 +23,6 @@ export class PhotoViewerComponent implements OnInit {
 	@HostListener('document:keypress', ['$event'])
 	handleKeyboardEvent(event: KeyboardEvent) {
 		if (this.visible) {
-			console.log(event.key);
 
 			switch (event.key) {
 				case 'ArrowLeft':

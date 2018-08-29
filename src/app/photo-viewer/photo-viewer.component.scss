@@ -73,8 +73,22 @@ $fa-font-path: "~font-awesome/fonts";
 			left: 0%;
 			right: 0%;
 			bottom: 0%;
+			h1{
+				font-size: 1.5em;
+				line-height: 150%;
+			}
+			.preview, .next{
+				display: none;
+			}
+			.close{
+				&::before{
+					font-size: 40px;
+				}
+			}
 		}
+		
 	}
+		
 }
 
 h2[view]{
